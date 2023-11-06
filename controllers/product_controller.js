@@ -1,8 +1,8 @@
 const Product = require("../models/product");
 
 module.exports.index = function (req, res) {
-  let products = Product.find({})
-    .then((posts) => {
+  Product.find({})
+    .then((products) => {
       return res.status(200).json({
         message: "List of Products",
         products: products,
