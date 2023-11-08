@@ -63,7 +63,7 @@ module.exports.delete = function (req, res) {
 
 module.exports.updateQuantity = function (req, res) {
   const productId = req.params.product_id; // ID of the document to be updated
-  const newQuantity = req.query.number; // New value for the quantity field
+  const newQuantity = req.query.numbers; // New value for the quantity field
 
   Product.findOne({ product_id: productId })
     .then((product) => {
